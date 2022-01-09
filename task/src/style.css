@@ -11,15 +11,14 @@ body{
     width: 550px;
     height: 550px;
     align-items: center;
-    /*border: 3px solid red;*/
     flex-wrap: wrap;
     justify-content: space-around;
     margin: auto;
 }
-p, h1{
+p, h1, div{
     font-family: 'Permanent Marker', cursive;
 }
-p{
+div{
     font-size: 20px;
     color: black;
 }
@@ -29,6 +28,24 @@ p{
     height: 150px;
     border: 1px solid pink;
     border-radius: 10px;
-    text-align: center;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.card{
+    transform-style: preserve-3d;
+    transition-duration: 2s;
+}
+.card:hover{
+    transform: rotateY(180deg);
+    background-color: aqua;
+}
+.main, .second{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border: black 1px solid;
+}
+.second{
+    transform: rotateY(180deg);
 }
